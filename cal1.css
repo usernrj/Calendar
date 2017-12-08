@@ -1,0 +1,159 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.calendar {
+    width: 800px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Satellite", "Roboto", sans-serif;
+    border: 1px solid rgba(21, 21, 21, 0.12);
+    transform: scale(1);
+    box-shadow: 0px 0px 4px rgba(21, 21, 21, 0.21);
+    user-select: none;
+}
+
+.calendar.small {
+    width: 400px;
+    height: 400px;
+}
+
+.calendar.medium {
+    width: 600px;
+    height: 600px;
+}
+
+.calendar.large {
+    width: 800px;
+    height: 800px;
+}
+
+.year {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.year>span {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.year>div {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.month {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 5px;
+    font-size: 40px;
+    box-shadow: 0px 2px 6px rgba(21, 21, 21, 0.21);
+}
+
+.month>span {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.month>div {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.labels {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.labels>span {
+    flex: 1;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.days {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 6px -2px rgba(21, 21, 21, 0.21);
+}
+
+.row {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.day {
+    flex: 1;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgba(21, 21, 21, .12);
+    border-right: 1px solid rgba(21, 21, 21, .12);
+    cursor: pointer;
+    transition: box-shadow 200ms ease-in-out;
+}
+
+.day:last-child {
+    border-right: none;
+}
+
+.day-radios {
+    display: none;
+}
+
+.day>span {
+    width: auto;
+    font-size: 14px;
+    color: rgba(21, 21, 21, 0.84);
+}
+
+.day.diluted {
+    background-color: rgba(21, 21, 21, 0.021);
+    box-shadow: inset 0px 0px 1px rgba(21, 21, 21, 0.12);
+}
+
+.day.diluted>span {
+    width: auto;
+    font-size: 10px;
+    color: rgba(21, 21, 21, 0.73);
+}
